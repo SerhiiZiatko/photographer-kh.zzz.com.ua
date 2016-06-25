@@ -1,0 +1,107 @@
+
+// стили header для мобильной версии
+.header{
+	background: rgba(19,19,19,0.9);
+	border-bottom: 1px solid rgba(128,106,59,0.5);
+	position: fixed;
+	width: 100%;
+	padding-top: 30px;
+	.wrapper{
+		overflow: hidden;
+	}
+	&::before{
+		bottom:-20px;
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 20px;
+		background: url(../img/dropFon.png) repeat-x;
+	}
+}
+
+#headerNavBut{
+	width: 20px;
+	height: 20px;
+	background: red;
+	border: none;
+	float: left;
+	margin-bottom: 20px;
+}
+#headerSocialBut{
+	@extend #headerNavBut;
+	float: right;
+}
+
+.headerNav{
+	float: left;
+	clear: left;
+
+	li{
+		margin-bottom: 15px;
+	}
+	a{
+		color: $FCwhite;
+		font-size: 2.0rem;
+		font-family: $FFrobotoC_lite;
+		padding: 5px 30px;
+		border: 2px solid transparent;
+		position: relative;	
+		transition: all 0.5s ease-out;
+		
+		&::after, &::before{
+			content: "";
+			position: absolute;
+			width: 5px;
+			height: 100%;
+			border: 2px solid transparent;
+			border-right: none;
+			top:-2px;
+			left: -2px;
+			transition: all 0.5s ease-out;
+		}
+		&::before{
+			left: auto;
+			right: -2px;
+			border: 2px solid transparent;
+			border-left: none;
+			
+		}
+		&:hover, &:focus{
+			color: $FCgoldLight;
+			&::after, &::before{
+				border-color: $FCgoldLight;
+			}
+		}	
+	}
+
+}
+
+
+.socialNav{
+	float: right;
+	text-align: right;
+	li{
+		float: left;
+		margin-right: 25px;
+		margin-bottom: 10px;
+		&:last-child{
+			margin-right: 0;
+		}
+		&:nth-child(2n+1){
+			clear: left;
+		}
+	}
+	a{
+		color: rgba(255,255,255, 0.19);
+		font-size: 2.0rem;
+		transition: all 0.5s ease-out;
+		&:hover, &:focus{
+			color: $FCgoldLight;
+		}
+	}
+}
+
+.dropDownNav{
+	height: 0;
+	overflow: hidden;
+}
