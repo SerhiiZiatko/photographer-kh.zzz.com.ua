@@ -1,0 +1,66 @@
+.services{
+	background-color: #fffcf4;
+	padding-bottom: 50px;
+	.title{
+		text-align: center;
+	}
+}
+.servicesItem{
+	border: 1px solid $FCgoldLight;
+	position: relative;
+	padding-top: 20px;
+	margin-bottom: 20px;
+	&::before, &::after{
+		content: "";
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		background-color: #fffcf4;
+		top: -1px;
+		right: -1px;
+	}
+	&::after{
+		top:auto;
+		right: auto;
+		bottom: -1px;
+		left: -1px;
+	}
+}
+.servicesItemTitle{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.servicesItemPoints{
+	padding-left: 40px;
+	padding-right: 20px;
+	li{
+		position: relative;
+		font-family: $FFrobotoC;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		&::before{
+			content: "";
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: $FCgoldLight;
+			left: -23px;
+			top:50%;
+			transform: translate( 0, -50% )
+		}
+		&:last-child{
+			margin-bottom: 20px;
+		}
+
+	}
+}
+.servicesItemPrice{
+	font-family: $FFmerriw;
+	font-size: 2.4rem;
+	font-weight: bold;
+	color:$FCgoldDark;
+	text-align: center;
+	margin-bottom: 20px;
+}

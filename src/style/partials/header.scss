@@ -4,35 +4,64 @@
 	background: rgba(19,19,19,0.9);
 	border-bottom: 1px solid rgba(128,106,59,0.5);
 	position: fixed;
+	z-index: 9999;
 	width: 100%;
 	padding-top: 30px;
 	.wrapper{
 		overflow: hidden;
 	}
 	&::before{
-		bottom:-20px;
+		bottom:-15px;
 		content: "";
 		position: absolute;
 		width: 100%;
-		height: 20px;
+		height: 15px;
 		background: url(../img/dropFon.png) repeat-x;
 	}
 }
 
+#headerItemSoc{
+	float: right;
+	overflow: hidden;
+}
+#headerItemNav{
+	float: left;
+	overflow: hidden;
+}
+
 #headerNavBut{
-	width: 20px;
-	height: 20px;
-	background: red;
+	width: 30px;
+	height: 30px;
+	background: $FCgoldLight;
 	border: none;
 	float: left;
 	margin-bottom: 20px;
+	padding: 0;
+	border-radius: 3px;
+	outline: none;
+	transition: $tr;
+	
+	i{
+		font-size: 18px;
+		color: $FCwhite;
+		text-align: center;
+		line-height: 30px;
+		transition: $tr;
+	}
+	&:hover, &:focus{
+		background: $FCwhite;
+		i{
+			color: $FCgoldLight;
+		}
+	}
 }
 #headerSocialBut{
 	@extend #headerNavBut;
 	float: right;
+	
 }
 
-.headerNav{
+#headerNav{
 	float: left;
 	clear: left;
 
@@ -42,59 +71,68 @@
 	a{
 		color: $FCwhite;
 		font-size: 2.0rem;
-		font-family: $FFrobotoC_lite;
+		font-family: $FFrobotoC;
+		font-weight: lighter;
 		padding: 5px 30px;
-		border: 2px solid transparent;
 		position: relative;	
-		transition: all 0.5s ease-out;
-		
-		&::after, &::before{
-			content: "";
-			position: absolute;
-			width: 5px;
-			height: 100%;
-			border: 2px solid transparent;
-			border-right: none;
-			top:-2px;
-			left: -2px;
-			transition: all 0.5s ease-out;
-		}
-		&::before{
-			left: auto;
-			right: -2px;
-			border: 2px solid transparent;
-			border-left: none;
-			
-		}
-		&:hover, &:focus{
-			color: $FCgoldLight;
-			&::after, &::before{
-				border-color: $FCgoldLight;
-			}
-		}	
+		transition: $tr;	
 	}
 
 }
+.border{
+	&::after, &::before{
+		content: "";
+		position: absolute;
+		width: 5px;
+		height: 100%;
+		border: 1px solid transparent;
+		border-right: none;
+		top:0px;
+		left: 0;
+		transition: $tr;
+	}
+	&::before{
+		left: auto;
+		right: 0;
+		border: 1px solid transparent;
+		border-left: none;
+		
+	}
+	&:hover, &:focus{
+		color: $FCgoldLight;
+		&::after, &::before{
+			border-color: $FCgoldLight;
+		}
+	}	
+}
+.active{
+	@extend .border;
+
+	color: $FCgoldLight !important;
+
+	&::after, &::before{
+		border-color: $FCgoldLight;
+	}
+}
+
 
 
 .socialNav{
 	float: right;
 	text-align: right;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
 	li{
-		float: left;
-		margin-right: 25px;
-		margin-bottom: 10px;
-		&:last-child{
-			margin-right: 0;
-		}
-		&:nth-child(2n+1){
-			clear: left;
-		}
+		
+		flex-basis:33%;
+		margin-bottom: 15px;	
+		
 	}
 	a{
 		color: rgba(255,255,255, 0.19);
-		font-size: 2.0rem;
-		transition: all 0.5s ease-out;
+		font-size: 3.0rem;
+		transition: $tr;
 		&:hover, &:focus{
 			color: $FCgoldLight;
 		}

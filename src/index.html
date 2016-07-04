@@ -5,34 +5,196 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Dmitry Maltsev</title>
-    <link rel="stylesheet" href="fonts/RobotoCondensed/robotocondensed.css">
-    <link rel="stylesheet" href="fonts/Merriweather/merriweather.css">
+    <!-- шрифты	-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&amp;subset=latin,cyrillic" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400italic,300italic,700,700italic,300&amp;subset=latin,cyrillic" type="text/css">
+    <link rel="stylesheet" href="css/liCover.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="js/plagins/jquery.liCover.js"></script>
     <script src="js/main.js"></script>
   </head>
   <body>
-    <header class="header">
-      <div class="wrapper">
-        <button id="headerNavBut"> </button>
-        <button id="headerSocialBut"> </button>
-        <ul class="headerNav dropDownNav">
-          <li><a>Главная</a></li>
-          <li><a>Портфолио		</a></li>
-          <li><a>Контакты</a></li>
+    <main>
+      <header class="header">
+        <div class="wrapper">
+          <button id="headerNavBut"><i class="fa fa-bars"> </i></button>
+          <button id="headerSocialBut"><i class="fa fa-share-square"> </i></button>
+          <ul id="headerNav" class="dropDownNav">
+            <li><a href="#" class="border active">Главная</a></li>
+            <li><a href="http://google.com" class="border">Портфолио	</a></li>
+            <li><a href="#" class="border">Контакты</a></li>
+          </ul>
+          <ul id="socialNav" class="socialNav dropDownNav">
+            <li><a href="#"><i class="fa fa-vk"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin">		</i></a></li>
+            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          </ul>
+        </div>
+      </header>
+      <section class="banner">
+        <div class="wrapper">
+          <h1 class="bannerName">Dmitry Maltsev</h1>
+          <p class="bannerProf">photografer</p>
+          <p class="bannerSlogan">
+            Нет правил хорошей фотографии, 
+            <br> есть просто хорошие фотографии.
+          </p>
+        </div>
+      </section>
+      <section class="mastery">
+        <h2 class="title">Мое мастерство</h2>
+        <div class="wrapper">
+          <div class="masteryItem">
+            <h3 class="portrait">Портретная съемка</h3>
+            <p>Портретная фотосъемка – один из самых сложных видов фотографии.</p>
+          </div>
+          <div class="masteryItem">
+            <h3 class="LoveStoty">Love Story</h3>
+            <p>Портретная фотосъемка – один из самых сложных видов фотографии.</p>
+          </div>
+          <div class="masteryItem">
+            <h3 class="wedding">Свадебная съемка</h3>
+            <p>Портретная фотосъемка – один из самых сложных видов фотографии.</p>
+          </div>
+        </div>
+        <div class="story">
+          <div class="wrapper">
+            <p>
+              Любовь к фотографии идет вместе со мной с самого детсва,  с тех пор, как мы с отцом проявляли пленку, закрыв окна одеялом, и сушили ее на бельевой веревке в ванной. <br>
+              <br>	
+              Современная фотография для меня — это интересные и порой неожиданные ракурсы, и близкие к натуральным цвета в обработке. Благодаря такой обработке Ваши фотографии сохранят свою актуальность и через 10-15 лет.<br>
+              <br>
+              Если ты хочешь сохранить свои радостные воспоминания,  ты попал по адресу. <br>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="gallery">
+        <div class="galleryHead title">
+          <div class="wrapper">
+            <h2>Из последних работ</h2>
+            <ul class="galleryNav">
+              <li><a href="#" class="border active">Все</a></li>
+              <li><a href="#" class="border">Портреты</a></li>
+              <li><a href="#" class="border">Lovestory</a></li>
+              <li><a href="#" class="border">Свадьба</a></li>
+            </ul>
+          </div>
+        </div>
+        <ul id="galleryId" class="galleryBody">
+          <li class="img1"><a href="img/shutterstock_48203248.jpg"><img src="img/shutterstock_48203248.jpg" class="cover">
+              <div class="galleryItem">
+                <h4 class="galleryItemTitle">Портретная фотосъемка</h4>
+                <p class="galleryItemDesc">Модель: Анна Овсянникова</p>
+              </div></a></li>
+          <li class="img2"><a href="img/firestock_woman_29092013.jpg"><img src="img/firestock_woman_29092013.jpg" class="cover">
+              <div class="galleryItem">
+                <h4 class="galleryItemTitle">Портретная фотосъемка</h4>
+                <p class="galleryItemDesc">Модель: Анна Овсянникова		</p>
+              </div></a></li>
+          <li class="img3"><a href="img/photo-1440508319978-8b67875e39d7.jpg"><img src="img/photo-1440508319978-8b67875e39d7.jpg" class="cover">
+              <div class="galleryItem">
+                <h4 class="galleryItemTitle">Портретная фотосъемка</h4>
+                <p class="galleryItemDesc">Модель: Анна Овсянникова</p>
+              </div></a></li>
+          <li class="img4"><a href="img/photo-1441786485319-5e0f0c092803.jpg"><img src="img/photo-1441786485319-5e0f0c092803.jpg" class="cover">
+              <div class="galleryItem">
+                <h4 class="galleryItemTitle">Портретная фотосъемка</h4>
+                <p class="galleryItemDesc">Модель: Анна Овсянникова</p>
+              </div></a></li>
+          <li class="img5"><a href="img/Dollarphotoclub_55679457.jpg"><img src="img/Dollarphotoclub_55679457.jpg" class="cover">
+              <div class="galleryItem">
+                <h4 class="galleryItemTitle">Портретная фотосъемка</h4>
+                <p class="galleryItemDesc">Модель: Анна Овсянникова</p>
+              </div></a></li>
+          <li class="img6"><a href="img/photodune-4006917.jpg"><img src="img/photodune-4006917.jpg" class="cover">
+              <div class="galleryItem">
+                <h4 class="galleryItemTitle">Портретная фотосъемка</h4>
+                <p class="galleryItemDesc">Модель: Анна Овсянникова</p>
+              </div></a></li>
+          <li class="img7"><a href="img/Dollarphotoclub_59364762.jpg"><img src="img/Dollarphotoclub_59364762.jpg" class="cover">
+              <div class="galleryItem">
+                <h4 class="galleryItemTitle">Портретная фотосъемка</h4>
+                <p class="galleryItemDesc">Модель: Анна Овсянникова</p>
+              </div></a></li>
+          <li class="img8"><a href="img/20130626msksc-a.jpg"><img src="img/20130626msksc-a.jpg" class="cover">
+              <div class="galleryItem">
+                <h4 class="galleryItemTitle">Портретная фотосъемка</h4>
+                <p class="galleryItemDesc">Модель: Анна Овсянникова</p>
+              </div></a></li>
         </ul>
-        <ul class="socialNav dropDownNav">
-          <li><a><i class="fa fa-vk"></i></a></li>
-          <li><a><i class="fa fa-facebook"></i></a></li>
-          <li><a><i class="fa fa-instagram"></i></a></li>
-          <li><a><i class="fa fa-google-plus-square"></i></a></li>
-          <li><a><i class="fa fa-linkedin">		</i></a></li>
-          <li><a><i class="fa fa-pinterest"></i></a></li>
-          <li><a><i class="fa fa-twitter"></i></a></li>
-        </ul>
-      </div>
-    </header>
+      </section>
+      <section class="services">
+        <h2 class="title">Пакеты услуг</h2>
+        <div class="wrapper">
+          <div class="servicesItem">
+            <h4 class="servicesItemTitle title">1 час съемки </h4>
+            <ul class="servicesItemPoints">
+              <li>Обработка всех фото</li>
+              <li>Детальная ретушь 10 фото</li>
+              <li>Все фото на диске с базовой коррекцией</li>
+              <li>Обработка до 7 дней</li>
+            </ul>
+            <p class="servicesItemPrice">500 грн</p>
+          </div>
+          <div class="servicesItem">
+            <h4 class="servicesItemTitle title">Фотосессия "мини" </h4>
+            <ul class="servicesItemPoints">
+              <li>Обработка всех фото </li>
+              <li>Детальная ретушь 40 фото</li>
+              <li>Печать 10 фото 10х15</li>
+              <li>Все фото на диске с базовой коррекцией</li>
+              <li>Обработка до 7 дней</li>
+            </ul>
+            <p class="servicesItemPrice">от 800 грн</p>
+          </div>
+          <div class="servicesItem">
+            <h4 class="servicesItemTitle title">Свадьба "стандарт"</h4>
+            <ul class="servicesItemPoints">
+              <li>Обработка всех фото</li>
+              <li>Детальная ретушь 100 фото</li>
+              <li>Печать 40 фото 10х15</li>
+              <li>Все фото на диске с базовой коррекцией</li>
+              <li>Обработка до 3 недель</li>
+            </ul>
+            <p class="servicesItemPrice">2500 грн</p>
+          </div>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="wrapper">
+          <h2 class="contactsTitle title">Контакты</h2>
+          <ul class="contactsTels">
+            <li> <i class="fa fa-phone"> </i>(063) 234 34 45</li>
+            <li> <i class="fa fa-phone"> </i>(095) 654 87 98</li>
+          </ul>
+          <ul class="contactsMail">
+            <li> <i class="fa fa-envelope"></i>dmaltsev@mail.ru</li>
+            <li> <i class="fa fa-skype"></i>dmaltsev_photografy</li>
+          </ul>
+        </div>
+        <div class="contactsSocial">
+          <div class="wrapper">
+            <h3 class="contactsSocialTitle">Я в социальных сетях</h3>
+            <ul class="contactsSocialItem">
+              <li><a href="#"><i class="fa fa-vk"></i></a></li>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin">		</i></a></li>
+              <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

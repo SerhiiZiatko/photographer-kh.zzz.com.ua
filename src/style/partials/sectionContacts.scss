@@ -1,0 +1,98 @@
+.contacts{
+	min-height: 520px;
+	background: rgba(0,0,0,0.85);
+	padding-top: 50px;
+	color:$FCwhite;
+	text-align: center;
+	position: relative;
+	display: flex;
+	flex-flow: row wrap;
+	align-items:stretch;
+	&::before{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background:url(../img/photo-1432105117111-b8c5bed69654.jpg) no-repeat center/cover ;	
+		top: 0;
+		left: 0;
+		z-index: -1;
+	} 
+	ul{
+		font-size: 2.6rem;
+		font-family: $FFrobotoC;
+		li{
+			margin-bottom: 10px;
+		}
+	}
+	i{
+		margin-right: 20px;
+	}
+
+
+}
+.contactsTitle{
+	padding-top: 0;
+	padding-bottom: 0;
+	color:$FCwhite;
+	background:none;
+}
+
+.contactsTels{
+	margin-bottom: 20px;
+	font-weight: bold;
+	li:not(:first-child) i{
+		opacity: 0;
+	}
+}
+.contactsMail{
+	font-style: italic;
+	margin-bottom: 20px;
+}
+.contactsSocial{
+	padding-top: 50px;
+	background: rgba(0,0,0,0.7);
+	overflow: hidden;
+	width: 100%;
+	text-align: center;
+	border-top: 1px solid rgba(128,106,59,0.5);
+	&::before{
+		left: 0;
+		bottom:0;
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 15px;
+		background: url(../img/SocFonDot.png) repeat-x;
+	}
+}
+
+.contactsSocialTitle{
+	font-size: 2.6rem;
+	font-family: $FFmerriw;	
+	font-style: italic;
+	margin-bottom: 20px;
+}
+.contactsSocialItem{
+	
+	float: none;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 35px;
+	text-align: center;
+	li{		
+
+		a{
+			width: auto;
+			color: rgba(255,255,255, 0.19);
+			font-size: 3.0rem;
+			transition: $tr;
+			&:hover, &:focus{
+				color: $FCgoldLight;
+			}
+			i{
+				margin:0;
+			}
+		}
+	}
+}

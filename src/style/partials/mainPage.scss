@@ -1,0 +1,26 @@
+
+.banner{
+	width: 100%;
+	height: 500px;
+	background: url(../img/Dollarphotoclub_52232043.jpg) no-repeat center/cover;
+	//background-size: 150% ;
+	padding-top: 200px;
+	color: $FCwhite;
+}
+.bannerName{
+	line-height: 6.8rem;
+	font-family: $FFrobotoC;
+	font-weight: bold;
+}
+.bannerProf{
+	text-transform: uppercase;
+	font-family: $FFrobotoC;
+	font-weight: lighter;
+	font-size: 1.6rem;
+	margin-bottom: 50px;
+}
+.bannerSlogan{
+	font-family: $FFmerriw;
+	font-style: italic;
+	font-size: 1.4rem;
+}

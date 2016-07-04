@@ -1,0 +1,86 @@
+.mastery{
+	text-align: center;
+}
+.title{
+	text-align: center;
+	font-family: $FFmerriw;
+	font-weight: lighter;
+	font-style: italic;
+	color: $FCgoldLight;
+	background: url(../img/dropFonWhite.png) , #e6e1d8;
+	padding: 50px 10px 20px;
+	margin-bottom: 30px;
+}
+.masteryItem{
+	h3{
+		font-family: $FFmerriw;
+		font-weight: bold;
+		font-style: italic;
+		color: $FCblack;
+		margin-bottom: 20px;
+	}
+	h3::before{
+		content: "";
+		display: block;
+		margin:auto;
+		height: 82px;
+		background: url(../img/spriteMastery.png) no-repeat 0 0;
+		margin-bottom: 20px;
+	}
+	.portrait::before{
+		width: 65px;
+	}
+	.LoveStoty::before{
+		width: 108px;
+		background-position: 0 -83px;
+	}
+	.wedding::before{
+		width: 120px;
+		background-position: 0 -168px;
+	}
+
+	p{
+		font-family: $FFrobotoC;
+		font-size: 14px;
+		margin-bottom: 20px;
+		color: $FCblack;
+	}
+	&:not(:last-child)::after{
+		content: "";
+		display: block;
+		width: 60%;
+		height: 1px;
+		background-color: $FCgoldLight;
+		margin: 0 auto 20px;
+
+	}
+	&:last-child{
+		margin-bottom: 50px;
+	}
+}
+
+.story{
+	min-height: 400px;
+	background: url(../img/Story.jpg) no-repeat center/cover;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: flex;
+	align-items: center; 
+	text-align: left;
+	.wrapper{
+		height: 100%;
+		display:flex;
+		flex-direction: row;
+		justify-content: flex-end;		
+	}
+
+	p{
+		font-family: $FFmerriw;
+		color: $FCwhite;
+		font-style: italic;
+		font-size: 1.4rem;
+		padding: 0 10px 0 80px;
+		max-width: 460px;
+		align-self:stretch;
+	}
+}
